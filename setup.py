@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='time_profile',
-    version='0.0.1',
+    version='1.0.0',
     description='SeabornTimingProfile collects, records, and reports timing'
                 'data on code implementing a number of different execution'
                 'strategies"',
