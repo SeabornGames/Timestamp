@@ -1,4 +1,26 @@
 from seaborn.time_profile import *
+import time
+import unittest
+
+def basic():
+    sleep(1)
+    print("Hello World!")
+
+class time_test(unittest.TestCase):
+    def test_message(self,function=basic,line_number=1, message='test',
+                     now=time.time(), thread_start=time.time()):
+        msg = TimeMessage(function,line_number,message,now,thread_start)
+        return msg
+
+    def test_report(self):
+        msg = self.test_message()
+        self.assertEqual(msg.report(1),{})
+
+    def test_update(self):
+        msg = self.test_message()
+        msg.update(time.time())
+        self.assertEqual(1,1)   #TODO: Finish
+        return msg
 
 def smoke_test():
     """
@@ -61,3 +83,6 @@ def smoke_test():
         if str(calc_answer) == right_answer:
             return
         calc_answer = start()
+
+if __name__ == "__main__":
+    unittest.main()
