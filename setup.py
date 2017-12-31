@@ -1,19 +1,22 @@
 from setuptools import setup
 
 setup(
-    name='time_profile',
-    version='0.0.1',
+    name='seaborn-timestamp',
+    version='1.0.0',
     description='SeabornTimingProfile collects, records, and reports timing'
                 'data on code implementing a number of different execution'
                 'strategies"',
     long_description='',
     author='Ben Christenson',
     author_email='Python@BenChristenson.com',
-    url='https://github.com/SeabornGames/TimingProfile',
-    install_requires=[],
+    url='https://github.com/SeabornGames/Timestamp',
+    install_requires=[
+        'psycopg2',
+    ],
     extras_require={
     },
-    py_modules=['seaborn.time_profile'],
+    py_modules=['seaborn.time_profile',
+                'seaborn.timestamp'],
     license='MIT License',
     classifiers=(
         'Intended Audience :: Developers',
