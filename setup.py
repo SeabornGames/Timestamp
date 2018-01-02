@@ -28,6 +28,7 @@ setup(
         'Programming Language :: Python :: 3.5'),
     entry_points='''
         [console_scripts]
-        seaborn_table=seaborn.seaborn_table:main
+        timestamp = seaborn.timestamp
+        time_profile = seaborn.time_profile
     ''',
 )
