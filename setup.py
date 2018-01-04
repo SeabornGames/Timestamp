@@ -15,7 +15,7 @@ setup(
     ],
     extras_require={
     },
-    py_modules=['seaborn.time_profile',
+    packages=['seaborn.time_profile',
                 'seaborn.timestamp'],
     license='MIT License',
     classifiers=(
