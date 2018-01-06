@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='seaborn-timestamp',
@@ -15,8 +15,8 @@ setup(
     ],
     extras_require={
     },
-    packages=['seaborn.time_profile',
-                'seaborn.timestamp'],
+    packages=['seaborn']+['seaborn.' + i
+                          for i in find_packages(where = './seaborn')],
     license='MIT License',
     classifiers=(
         'Intended Audience :: Developers',
@@ -26,9 +26,4 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5'),
-    entry_points='''
-        [console_scripts]
-        timestamp = seaborn.timestamp
-        time_profile = seaborn.time_profile
-    ''',
 )
