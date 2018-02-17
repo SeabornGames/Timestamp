@@ -1,4 +1,7 @@
 from setuptools import setup, find_packages
+import os
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as f:
+    long_description = f.read()
 
 setup(
     name='seaborn-timestamp',
@@ -6,7 +9,7 @@ setup(
     description='SeabornTimingProfile collects, records, and reports timing'
                 'data on code implementing a number of different execution'
                 'strategies"',
-    long_description='',
+    long_description=long_description,
     author='Ben Christenson',
     author_email='Python@BenChristenson.com',
     url='https://github.com/SeabornGames/Timestamp',
