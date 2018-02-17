@@ -43,7 +43,7 @@ import logging
 
 log = logging.getLogger(__name__)
 from seaborn.meta.calling_function import function_info
-from seaborn.seabro import SeabornTable
+from seaborn.table.table import SeabornTable
 
 
 class TimeProfile(object):
