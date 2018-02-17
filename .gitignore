@@ -116,4 +116,5 @@ _*.txt
 
 *.pyc
 .DS_Store
+tmp/
 

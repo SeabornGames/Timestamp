@@ -1,22 +1,22 @@
 from setuptools import setup, find_packages
 import os
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as f:
+with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
     long_description = f.read()
 
 setup(
     name='seaborn-timestamp',
     version='1.0.0',
-    description='SeabornTimingProfile collects, records, and reports timing'
-                'data on code implementing a number of different execution'
-                'strategies"',
+    description='Seaborn Timestamp has timing functions an da timing profile'
+                ' which collects and reports on timeing data of code execution',
     long_description=long_description,
     author='Ben Christenson',
     author_email='Python@BenChristenson.com',
     url='https://github.com/SeabornGames/Timestamp',
     install_requires=[
+        'seaborn-hack',
         'psycopg2',
     ],
-    extras_require={
+    extras_require={'test':['seaborn-file']
     },
     packages=['seaborn']+['seaborn.' + i
                           for i in find_packages(where = './seaborn')],
