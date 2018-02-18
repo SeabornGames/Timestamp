@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 import os
+
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
     long_description = f.read()
 
@@ -13,8 +14,8 @@ setup(
     author_email='Python@BenChristenson.com',
     url='https://github.com/SeabornGames/Timestamp',
     install_requires=[
-        'seaborn-hack',
         'psycopg2',
+        'seaborn-hack',
     ],
     extras_require={'test':['seaborn-file']
     },
