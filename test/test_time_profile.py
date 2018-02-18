@@ -9,8 +9,8 @@ It should print out the following answer::
 import unittest
 import time
 
-from seaborn.timestamp.time_profile import TimeMessage, TimeProfile, sleep
-from seaborn.file.flie import read_file, relative_path
+from seaborn_timestamp.time_profile import TimeMessage, TimeProfile, sleep
+from seaborn_file.file import read_file, relative_path
 TimeProfile.SIGNIFICANT_DIGITS = 1 # this is to make the test work
 TMI = TimeProfile.message
 

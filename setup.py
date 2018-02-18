@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 import os
 
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
@@ -15,12 +15,10 @@ setup(
     url='https://github.com/SeabornGames/Timestamp',
     install_requires=[
         'psycopg2',
-        'seaborn-hack',
     ],
     extras_require={'test':['seaborn-file']
     },
-    packages=['seaborn']+['seaborn.' + i
-                          for i in find_packages(where = './seaborn')],
+    packages=['seaborn_timestamp'],
     license='MIT License',
     classifiers=(
         'Intended Audience :: Developers',

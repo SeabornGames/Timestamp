@@ -1,6 +1,6 @@
 import unittest
 
-from seaborn.timestamp.timestamp import TIMESTAMP_FORMAT, datetime_to_str
+from seaborn_timestamp.timestamp import TIMESTAMP_FORMAT, datetime_to_str
 
 class TestTimestamp(unittest.TestCase):
     @unittest.skip("NotImplemented")
