@@ -1,12 +1,15 @@
 from setuptools import setup
 import os
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
-    long_description = f.read()
+try:
+    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
+        long_description = f.read()
+except:
+    long_description = ''
 
 setup(
     name='seaborn-timestamp',
-    version='1.0.0',
+	version='1.0.4',
     description='Seaborn Timestamp has timing functions an da timing profile'
                 ' which collects and reports on timeing data of code execution',
     long_description=long_description,
