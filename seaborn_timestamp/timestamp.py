@@ -106,7 +106,7 @@ def datetime_to_str(date_time=None, str_format='%Y-%m-%d_%H:%M:%S.fff'):
     ret = date_time.strftime(str_format.split('.f')[0])
     if '.f' in str_format:
         sig_digits = len(str_format.split('.')[-1]) + 1
-        ret += str(date_time.microsecond % 1000 / 1000.0
+        ret += str(date_time.microsecond / 1000000.0
                    )[1:].ljust(sig_digits, '0')[:sig_digits]
     return ret
 
