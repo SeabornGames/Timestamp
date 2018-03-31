@@ -1,2 +1,3 @@
 psycopg2==2.7.3.2
 gevent==1.2.2
+seaborn_meta
