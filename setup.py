@@ -1,8 +1,12 @@
 from setuptools import setup
 import os
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
-    long_description = f.read()
+
+try:
+    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
+        long_description = f.read()
+except IOError:
+    long_description = ''
 
 setup(
     name='seaborn-timestamp',
@@ -16,7 +20,15 @@ setup(
     install_requires=[
         'psycopg2',
     ],
-    extras_require={'test':['seaborn-file']
+    extras_require={
+        'test':[
+            'seaborn-file',
+        ],
+        'time-profile':[
+            'seaborn-meta',
+            'seaborn-table',
+            'gevent',
+        ],
     },
     packages=['seaborn_timestamp'],
     license='MIT License',

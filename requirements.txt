@@ -1,3 +1,4 @@
 psycopg2==2.7.3.2
 gevent
 git+https://github.com/SeabornGames/meta.git#egg=seaborn-meta
+git+https://github.com/SeabornGames/table.git#egg=seaborn-table
