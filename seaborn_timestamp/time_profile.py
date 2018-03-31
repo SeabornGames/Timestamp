@@ -36,9 +36,6 @@ __date__ = "4/23/15"
 
 from time import time as get_time
 import gevent
-import traceback
-import inspect
-from time import sleep
 import logging
 
 log = logging.getLogger(__name__)
