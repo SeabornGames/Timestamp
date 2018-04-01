@@ -9,7 +9,7 @@ except IOError:
 
 setup(
     name='seaborn-timestamp',
-    version='1.0.0',
+    version='1.1.0',
     description='Seaborn Timestamp has timing functions and a timing profile'
                 ' which collects and reports on timing data of code execution',
     long_description=long_description,
