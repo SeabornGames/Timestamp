@@ -4,14 +4,14 @@ import os
 try:
     with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
         long_description = f.read()
-except:
+except IOError:
     long_description = ''
 
 setup(
     name='seaborn-timestamp',
-	version='1.0.4',
-    description='Seaborn Timestamp has timing functions an da timing profile'
-                ' which collects and reports on timeing data of code execution',
+    version='1.0.0',
+    description='Seaborn Timestamp has timing functions and a timing profile'
+                ' which collects and reports on timing data of code execution',
     long_description=long_description,
     author='Ben Christenson',
     author_email='Python@BenChristenson.com',
@@ -19,7 +19,15 @@ setup(
     install_requires=[
         'psycopg2',
     ],
-    extras_require={'test':['seaborn-file']
+    extras_require={
+        'test':[
+            'seaborn-file',
+        ],
+        'time-profile':[
+            'seaborn-meta',
+            'seaborn-table',
+            'gevent',
+        ],
     },
     packages=['seaborn_timestamp'],
     license='MIT License',
