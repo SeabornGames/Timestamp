@@ -1,7 +1,6 @@
 from setuptools import setup
 import os
 
-
 try:
     with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
         long_description = f.read()
